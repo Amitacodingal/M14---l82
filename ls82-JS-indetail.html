@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS in Detail</title>
+</head>
+<body>
+<!-- activity1 type convertion -->
+<h2>The JavaScript String() Method</h2>
+
+<p>The String() method can convert a number to a string.</p>
+
+<p id="number_result"></p>
+<p id="string_result"></p>
+
+<!-- activity2  regular expression for searching the string-->
+<h2>JavaScript String Methods</h2>
+
+<p>Search a string for "doing", and display the position of the match and replace the word "how are" by "how are you"
+and display</p>
+
+<p id="search_result"></p>
+<p id="replace_result"></p>
+<!-- activity3 EH -->
+<h2>JavaScript Error Handling</h2>
+
+<p>This example demonstrates how to use <b>catch</b> to diplay an error.</p>
+
+<p id="error_message"></p>
+
+<!-- activity 4 arrow function  -->
+
+<h2>JavaScript Arrow Function</h2>
+<p>This example shows an Arrow Function with a parameter.</p>
+<p id="result"></p>
+
+<!-- activity 5  -->
+
+<h2>JavaScript Error Handling and arrow function</h2>
+<p>This example demonstrates how to use <b>catch</b> to diplay an error.</p>
+<p id="result1"></p>
+
+<script>
+
+//activity1 type convertion
+var x = 70;;
+var y = 90;
+document.getElementById("number_result").innerHTML = x + y;
+document.getElementById("string_result").innerHTML = String(x) + String(y); // Does not add because it is a string it concatenates 
+
+//activity2  regular expression for searching the string
+var str = "Hai hello how are doing for the day";
+var search_position = str.search("doing");
+var txt = str.replace("how are", "how are you")
+document.getElementById("search_result").innerHTML = search_position;
+document.getElementById("replace_result").innerHTML = txt;
+
+//activity 3 error handling
+
+try {
+addalert("Welcome guest!");
+}
+catch (err) {
+document.getElementById("error_message").innerHTML = err.message;
+}
+
+// activity 4 arrow function
+
+add = (a, b) => a + b;
+document.getElementById("result").innerHTML = add(4, 6);
+
+//activity 5
+
+product = (a, b) => a * b;
+try {
+document.getElementById("result1").innerHTML = a;
+// if the function is invoked here the result will be displayed
+// if any varible is given the error message get displayed
+}
+catch (err) {
+document.getElementById("result1").innerHTML = err.message;
+}
+
+</script>
+
+</body>
+</html>
